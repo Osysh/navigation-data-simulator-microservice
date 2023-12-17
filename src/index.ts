@@ -1,14 +1,32 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import http from 'http';
+import path from 'path';
 import { SimulationHandler } from './SimulationHandler';
+import cors from 'cors';
+import { ManageFiles } from './ManageFiles';
 
 const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 const simulationHandler = new SimulationHandler(server);
 
-// Consolidate the status routes into one
+app.use(cors());
+
 app.get('/api/status', (req, res) => {
+  res.json({ status: 'Server is running' });
+});
+
+app.get('/api/params', (req, res) => {
+  const fileParams = ManageFiles.readInputFile(path.resolve(__dirname, '../config/input.yml'));
+
+  res.json({ 
+    refreshInterval: fileParams.settings.rafraichissement,
+    from: fileParams.mobile[0].route[0],
+    to: fileParams.mobile[0].route[1]
+  });
+});
+
+app.post('/api/params', (req, res) => {
   res.json({ status: 'Server is running' });
 });
 

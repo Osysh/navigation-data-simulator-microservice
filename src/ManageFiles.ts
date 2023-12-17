@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { DataToSend, Mobile, Simu } from './types';
+import { Simu } from './types';
 import yaml from 'yaml';
 
 export class ManageFiles {
@@ -11,7 +11,7 @@ export class ManageFiles {
       return yaml.parse(file) as Simu;
     } catch (error) {
       console.error('Error reading input file:', error);
-      throw error; // Re-throw the error to handle it outside
+      throw error;
     }
   }
   
@@ -21,7 +21,7 @@ export class ManageFiles {
       return yaml.parse(file) as string;
     } catch (error) {
       console.error('Error reading output file:', error);
-      throw error; // Re-throw the error to handle it outside
+      throw error;
     }
   }
 

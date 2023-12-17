@@ -3,7 +3,7 @@ import { Server } from "http";
 import { Socket } from "./Socket";
 import { ManageFiles } from "./ManageFiles";
 import { SimulationGenerator } from "./SimulationGenerator";
-import { DataToSend, TableData } from "./types";
+import { DataToSend } from "./types";
 import { isEmptyObject } from "./utils/isEmptyObject";
 
 export class SimulationHandler {

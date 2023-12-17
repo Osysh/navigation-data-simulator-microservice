@@ -8,21 +8,6 @@ interface Route {
     time: Date;
 }
 
-// interface MobileData {
-//     id: string;
-//     lat: number;
-//     long: number;
-//     course?: number; // Optional, depends on how you calculate it
-//     speed?: number; // Optional, depends on how you calculate it
-//     name: string;
-//     type: MobileType;
-// }
-
-// export interface DataToSend {
-//     timestamp: Date;
-//     mobiles: Record<string, MobileData>;
-// }
-
 export interface Mobile {
     nom: string;
     type: MobileType;
@@ -41,7 +26,7 @@ export interface Simu {
 }
 
 export interface DataToSend {
-    [key: string]: { position: GeoPosition, name: string }[]; // Date as key, array of positions and names as value
+    [key: string]: { position: GeoPosition, name: string }[];
 }
 
 export interface TableData {
@@ -53,8 +38,3 @@ export interface MobileData {
     position: GeoPosition;
     name: string;
 }
-
-export interface RequestParams {
-    status: number;
-    // Other properties if needed
-  }
