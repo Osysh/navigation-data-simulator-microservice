@@ -1,0 +1,26 @@
+name: 'la simu'
+mobile:
+  - nom: 'mobile_1'
+    type: 'boat'
+    isRandom: false
+    schema: null
+    route:
+      - lat: 40.7128
+        long: -74.0060
+        time: '2023-01-01T00:00:00Z'
+      - lat: 42.3601
+        long: -71.0589
+        time: '2023-01-02T00:00:00Z'
+  - nom: 'mobile_2'
+    type: 'boat'
+    isRandom: false
+    schema: null
+    route:
+      - lat: 34.0522
+        long: -118.2437
+        time: '2023-01-15T10:30:00Z'
+      - lat: 40.7128
+        long: -74.0060
+        time: '2023-02-20T15:45:00Z'
+settings:
+  rafraichissement: 5
