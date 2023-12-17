@@ -23,8 +23,8 @@ Connection : {
 
 ### Deploy
 
-docker build --tag vitals-device-tracker .
-docker run -dp 127.0.0.1:3000:3000 vitals-device-tracker:latest
+docker build --tag navigation-data-simulator-microservice .
+docker run -dp 127.0.0.1:3000:3000 navigation-data-simulator-microservice:latest
 
 ## TESTS
 
